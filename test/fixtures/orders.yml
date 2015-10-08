@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: MyString
+  price: 9.99
+  paid: false
+  tax: 9.99
+  shipping: 9.99
+  shipped: 2015-10-07 16:07:27
+  notes: MyText
+  timestamps: MyString
+
+two:
+  customer_id: MyString
+  price: 9.99
+  paid: false
+  tax: 9.99
+  shipping: 9.99
+  shipped: 2015-10-07 16:07:27
+  notes: MyText
+  timestamps: MyString
