@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151007232125) do
+ActiveRecord::Schema.define(version: 20151007231303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,50 +61,36 @@ ActiveRecord::Schema.define(version: 20151007232125) do
     t.string   "fein"
     t.string   "bank"
     t.string   "references"
-    t.string   "notes"
+    t.text     "notes"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string   "customer_id"
+    t.integer  "customer_id"
     t.decimal  "price"
     t.boolean  "paid"
     t.decimal  "tax"
     t.decimal  "shipping"
     t.datetime "shipped"
     t.text     "notes"
-    t.string   "timestamps"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "products", force: :cascade do |t|
-    t.integer  "order_id"
-    t.integer  "customer_id"
-    t.string   "supplier"
-    t.string   "qty"
+    t.string   "name"
+    t.string   "sku"
+    t.string   "characteristics"
+    t.text     "supplier"
+    t.string   "qty_on_hand"
     t.integer  "reorder_level"
+    t.integer  "qty_minimum_order"
+    t.string   "gross_order_price"
     t.string   "weight_per_each"
-    t.string   "notes"
-    t.string   "timestamps"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  create_table "shipments", force: :cascade do |t|
-    t.integer  "order_id"
-    t.integer  "product_id"
-    t.integer  "customer_id"
-    t.text     "shipper"
-    t.string   "tracking_no"
-    t.decimal  "cost"
-    t.boolean  "insurance"
-    t.decimal  "insurance_cost"
     t.text     "notes"
-    t.string   "timestamps"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end

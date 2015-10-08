@@ -12,7 +12,7 @@ class CreateCustomers < ActiveRecord::Migration
       t.string :fein
       t.string :bank
       t.string :references
-      t.string :notes
+      t.text   :notes
 
       t.timestamps null: false
     end
