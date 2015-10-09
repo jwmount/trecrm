@@ -1,4 +1,4 @@
-ActiveAdmin.register Product do
+ActiveAdmin.register Shipment do
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -7,13 +7,11 @@ ActiveAdmin.register Product do
 #
 # or
 #
-  permit_params do
-    permitted = [:name, :sku, :order_id, :customer_id, :supplier, :qty, :reorder_level,
-                 :weight_per_each, :notes
-                ]
+ permit_params do
+   permitted = [:order, :product]
 #   permitted << :other if resource.something?
 #   permitted
-  end
+ end
 
 
 end

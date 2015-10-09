@@ -3,23 +3,7 @@
 one:
   order_id: 1
   product_id: 1
-  customer_id: 1
-  shipper: MyText
-  tracking_no: MyString
-  cost: 9.99
-  insurance: false
-  insurance_cost: 9.99
-  notes: MyText
-  timestamps: MyString
 
 two:
   order_id: 1
   product_id: 1
-  customer_id: 1
-  shipper: MyText
-  tracking_no: MyString
-  cost: 9.99
-  insurance: false
-  insurance_cost: 9.99
-  notes: MyText
-  timestamps: MyString
