@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20151009023452) do
   create_table "customers", force: :cascade do |t|
     t.string   "name"
     t.string   "legal_name"
-    t.string   "approved_to_order"
+    t.boolean  "approved_to_order"
     t.string   "contact"
     t.string   "phone"
     t.string   "fax"
@@ -68,15 +68,14 @@ ActiveRecord::Schema.define(version: 20151009023452) do
 
   create_table "orders", force: :cascade do |t|
     t.integer  "customer_id"
-    t.string   "order_number"
     t.decimal  "price"
     t.boolean  "paid"
     t.decimal  "tax"
     t.decimal  "shipping"
     t.datetime "shipped"
     t.text     "notes"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "products", force: :cascade do |t|
@@ -87,21 +86,16 @@ ActiveRecord::Schema.define(version: 20151009023452) do
     t.string   "qty_on_hand"
     t.integer  "reorder_level"
     t.integer  "qty_minimum_order"
-    t.decimal  "minimum_order_cost",     precision: 8, scale: 2
-    t.string   "quote_basis"
-    t.decimal  "port_to_warehouse_cost", precision: 8, scale: 2
-    t.decimal  "insurance_cost",         precision: 8, scale: 2
-    t.decimal  "min_order_ship_cost",    precision: 8, scale: 2
+    t.string   "gross_order_cost"
     t.string   "weight_per_each"
     t.text     "notes"
-    t.datetime "created_at",                                     null: false
-    t.datetime "updated_at",                                     null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "shipments", force: :cascade do |t|
     t.integer  "order_id"
     t.integer  "product_id"
-    t.string   "code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

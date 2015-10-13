@@ -2,6 +2,7 @@ class CreateOrders < ActiveRecord::Migration
   def change
     create_table :orders do |t|
       t.integer :customer_id
+      t.string  :order_number
       t.decimal :price
       t.boolean :paid
       t.decimal :tax

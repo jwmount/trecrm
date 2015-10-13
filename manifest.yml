@@ -1,0 +1,14 @@
+---
+applications:
+  #https://developer.ibm.com/bluemix/2015/03/05/tips-migrating-ruby-rails-applications-bluemix/
+  #http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#services-block
+- name: trecrm
+  memory: 1GB
+  instances: 1
+  path: .
+  # Migrate, preserve data
+  command: bundle exec rake db:migrate && bundle exec rails s -p $PORT
+  # Setup, destroys data
+  # command: bundle exec rake db:migrate && bundle exec rails s -p $PORT
+  services:
+    - ElephantSQL-8f

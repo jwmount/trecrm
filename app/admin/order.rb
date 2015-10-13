@@ -1,4 +1,5 @@
 ActiveAdmin.register Order do
+#  belongs_to :customer
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -8,7 +9,7 @@ ActiveAdmin.register Order do
 # or
 #
   permit_params do
-  permitted = [:permitted, :customer_id, :price, :paid, :tax, :shipping, :shipped,
+  permitted = [:customer_id, :order_number, :price, :paid, :tax, :shipping, :shipped,
                :notes
               ]
 #   permitted << :other if resource.something?
