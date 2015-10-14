@@ -69,9 +69,7 @@ ActiveRecord::Schema.define(version: 20151009023452) do
   create_table "orders", force: :cascade do |t|
     t.integer  "customer_id"
     t.string   "order_number"
-    t.string   "rep"
     t.decimal  "price"
-    t.decimal  "discount"
     t.boolean  "paid"
     t.decimal  "tax"
     t.decimal  "shipping"

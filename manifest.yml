@@ -9,6 +9,8 @@ applications:
   # Migrate, preserve data
   command: bundle exec rake db:migrate && bundle exec rails s -p $PORT
   # Setup, destroys data
-  # command: bundle exec rake db:migrate && bundle exec rails s -p $PORT
+  # command: bundle exec rake db:reset && bundle exec rails s -p $PORT
   services:
     - ElephantSQL-8f
+    - Monitoring and Analytics-6o
+    - SendGrid-yy
