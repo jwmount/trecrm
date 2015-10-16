@@ -6,11 +6,11 @@ class CreateOrders < ActiveRecord::Migration
       t.string  :order_number
       t.string  :rep
       t.integer :qty
-      t.decimal :price,      precision: 5, scale: 2
-      t.decimal :discount,   precision: 2
+      t.decimal :price,      precision: 10, scale: 2
+      t.decimal :discount,   precision: 10
       t.boolean :paid
-      t.decimal :tax,        precision: 5, scale: 2
-      t.decimal :shipping,   precision: 5, scale: 2
+      t.decimal :tax,        precision: 10, scale: 2
+      t.decimal :shipping,   precision: 10, scale: 2
       t.datetime :shipped_on
       t.boolean :shipped,    default: false
       t.text :notes
