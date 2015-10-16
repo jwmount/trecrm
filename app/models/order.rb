@@ -8,4 +8,6 @@ class Order < ActiveRecord::Base
     self.order_number
   end
 
+  validates_presence_of :order_number
+  
 end

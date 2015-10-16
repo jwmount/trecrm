@@ -5,14 +5,25 @@ ActiveAdmin.register Order do
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
 
+  scope :all, :default => true 
+  scope :paid do |orders|
+    orders.where ({paid: true})
+  end
+  scope :shipped do |orders|
+    orders.where ({shipped: true})
+  end
+
  index do
 
  	selectable_column
 
- 	column :customer_id
-    column :product_id
-    column :order_number
+ 	  column :customer
+    column :product
+    column "Order Details" do |order|
+      render order
+    end
     column :rep
+    column :qty
     column :price
     column :paid
     column :shipped
@@ -25,7 +36,7 @@ ActiveAdmin.register Order do
 # or
 #
   permit_params do
-  permitted = [:customer_id, :product_id, :order_number, :rep, :price, :paid, :tax, :shipping, :shipped,
+  permitted = [:customer_id, :product_id, :order_number, :rep, :qty, :price, :paid, :tax, :shipping, :shipped,
                :notes
               ]
 #   permitted << :other if resource.something?

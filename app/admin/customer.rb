@@ -24,11 +24,10 @@ ActiveAdmin.register Customer do
     end      
     column :contact
     column :phone
-    column :email
-
+    column :email  
     column "Orders" do |customer|
-      #link_to "New Order", new_admin_customer_order_path( customer )
       render customer.orders if customer.orders.any?
+      render text: 'None' if customer.orders.empty?
     end
 
  end #index

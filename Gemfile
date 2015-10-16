@@ -1,3 +1,5 @@
+# cf push -b https://github.com/cloudfoundry/buildpack-ruby.git
+
 source 'https://rubygems.org'
 ruby '2.2.2'
 

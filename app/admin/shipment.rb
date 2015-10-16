@@ -8,7 +8,7 @@ ActiveAdmin.register Shipment do
 # or
 #
  permit_params do
-   permitted = [:code]
+   permitted = [:order, :code]
 #   permitted << :other if resource.something?
 #   permitted
  end
