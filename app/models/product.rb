@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
 
-  has_many :shipments
+  has_many :orders
   
+
 end

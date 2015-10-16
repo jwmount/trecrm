@@ -2,14 +2,15 @@ class CreateOrders < ActiveRecord::Migration
   def change
     create_table :orders do |t|
       t.integer :customer_id
+      t.integer :product_id
       t.string  :order_number
       t.string  :rep
-      t.decimal :price
-      t.decimal :discount
+      t.decimal :price,      precision: 5, scale: 2
+      t.decimal :discount,   precision: 2
       t.boolean :paid
-      t.decimal :tax
-      t.decimal :shipping
-      t.datetime :shipped
+      t.decimal :tax,        precision: 5, scale: 2
+      t.decimal :shipping,   precision: 5, scale: 2
+      t.datetime :shipped_on
       t.text :notes
 
       t.timestamps null: false

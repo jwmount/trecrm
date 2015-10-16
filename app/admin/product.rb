@@ -4,8 +4,16 @@ ActiveAdmin.register Product do
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
 
+  index do
 
-
+    column :name
+    column :sku
+    column :characteristics
+    column :quote_basis
+    column :minimum_order_cost
+    column :minimum_order_ship_cost
+  end
+  
   form do |f|
     error_panel f
 

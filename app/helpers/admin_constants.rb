@@ -13,9 +13,32 @@ module AdminConstants
 #
 # Company
 #
-  ADMIN_CUSTOMER_LEGAL_NAME_HINT         = "Legal business name, e.g. Saddles DBA or LLC or Corp."
   ADMIN_CUSTOMER_APPROVED_HINT           = "Customer is approved to order."
+  ADMIN_CUSTOMER_CONTACT_HINT            = "Person who knows about buying from us."
+  ADMIN_CUSTOMER_LEGAL_NAME_HINT         = "Legal business name, e.g. Saddles DBA or LLC or Corp."
   ADMIN_CUSTOMER_NAME_HINT               = "Best known or public name."   
+  ADMIN_CUSTOMER_PHONE_HINT              = "Contact person phone number."
+  ADMIN_CUSTOMER_EMAIL_HINT              = "Best email to use for Contact person."
+
+  ADMIN_CUSTOMER_TAXID_LABEL             = "TaxID"
+  ADMIN_CUSTOMER_TAXID_HINT              = "State Tax ID, if there is one"
+  ADMIN_CUSTOMER_TAXID_PLACEHOLDER        = "72-4543245"
+
+  ADMIN_CUSTOMER_FEIN_LABEL              = "FEIN"
+  ADMIN_CUSTOMER_FEIN_HINT               = "Federal Employer Identification Number"
+  ADMIN_CUSTOMER_FEIN_PLACEHOLDER        = "72-4543245"
+
+  ADMIN_CUSTOMER_NOTES_HINT              = "Notes about this customer generally.  To track conversations and agreements use Comments."
+  ADMIN_CUSTOMER_NOTES_PLACEHOLDER       = "Example:  OK to leave shipment instructions."
+#
+# Order
+#
+  ADMIN_ORDER_NUMBER_HINT                = "Order ID or tracking number."
+  ADMIN_ORDER_NUMBER_PLACEHOLDER         = "1-0001"
+
+  ADMIN_ORDER_PAYMENT_METHOD_HINT        = "Payment method used.  If other, describe in Notes."
+  ADMIN_ORDER_PAYMENT_METHOD_COLLECTION  = %w[ Visa Paymentech Paypal Invoice Check Invoice Other ]
+  ADMIN_ORDER_SHIPPED_ON_HINT            = "Date was or will be shipped."
 #
 # Product
 #

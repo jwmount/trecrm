@@ -27,8 +27,8 @@ ActiveAdmin.register Customer do
     column :email
 
     column "Orders" do |customer|
-      render html: "<p> new"
-      render customer.orders
+      #link_to "New Order", new_admin_customer_order_path( customer )
+      render customer.orders if customer.orders.any?
     end
 
  end #index
