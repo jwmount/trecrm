@@ -17,11 +17,11 @@ ActiveAdmin.register Order do
 
  	selectable_column
 
- 	  column :customer
-    column :product
     column "Order Details" do |order|
       render order
     end
+    column :customer
+    column :product
     column :rep
     column :qty
     column :price
