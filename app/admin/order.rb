@@ -17,7 +17,7 @@ ActiveAdmin.register Order do
 
  	selectable_column
 
-    column "Order Details" do |order|
+    column "Order Details (click for details)" do |order|
       render order
     end
     column :customer
@@ -36,8 +36,8 @@ ActiveAdmin.register Order do
 # or
 #
   permit_params do
-  permitted = [:customer_id, :product_id, :order_number, :rep, :qty, :price, :paid, :tax, :shipping, :shipped,
-               :notes
+  permitted = [:customer_id, :product_id, :order_number, :rep, :qty, :price, :discount,
+               :paid, :tax, :shipping, :shipped, :shipped_on, :notes
               ]
 #   permitted << :other if resource.something?
 #   permitted

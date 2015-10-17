@@ -22,6 +22,15 @@ ActiveAdmin.register_page "Dashboard" do
           end
         end
       end
+      column do
+        panel "Products" do
+          ul do
+            Product.all.map do |product|
+              li link_to(product.name, admin_product_path(product))
+            end
+          end
+        end
+      end
 
     #   column do
     #     panel "Info" do

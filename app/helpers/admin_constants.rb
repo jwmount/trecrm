@@ -50,4 +50,9 @@ module AdminConstants
   ADMIN_PRODUCT_CHARACTERISTICS_PLACEHOLDER = "Describe product features, color, size etc."
   ADMIN_PRODUCT_QUOTE_BASIS_COLLECTION   = %w[ FOB XFACTORY OTHER]
   ADMIN_PRODUCT_QUOTE_BASIS_HINT         = "Quote coverage for shipping from factory."
+  ADMIN_PRODUCT_MOC_HINT                 = "Price of minimum order."
+  ADMIN_PRODUCT_MOC_PLACEHOLDER          = "$120.00"
+  ADMIN_PRODUCT_MOCSC_HINT               = "Minimum order shipping cost by ground."
+  ADMIN_PRODUCT_MOCSC_PLACEHOLDER        = "$48.00"
+
 end

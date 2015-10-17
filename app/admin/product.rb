@@ -6,7 +6,9 @@ ActiveAdmin.register Product do
 
   index do
 
-    column :name
+    column "Product Details (click for details)" do |product|
+      render product
+    end
     column :sku
     column :characteristics
     column :quote_basis
@@ -18,6 +20,7 @@ ActiveAdmin.register Product do
     error_panel f
 
     f.inputs "Site Details" do
+
       f.input :name,
         :hint                => AdminConstants::ADMIN_PRODUCT_NAME_HINT,
         :placeholder         => AdminConstants::ADMIN_PRODUCT_NAME_PLACEHOLDER 
@@ -36,6 +39,15 @@ ActiveAdmin.register Product do
         :include_blank       => false,
         :required            => true,
         :hint                => AdminConstants::ADMIN_PRODUCT_QUOTE_BASIS_HINT
+
+      f.input :minimum_order_cost,
+        :hint                => AdminConstants::ADMIN_PRODUCT_MOC_HINT,
+        :placeholder         => AdminConstants::ADMIN_PRODUCT_MOC_PLACEHOLDER
+
+      f.input :minimum_order_cost,
+        :hint                => AdminConstants::ADMIN_PRODUCT_MOCSC_HINT,
+        :placeholder         => AdminConstants::ADMIN_PRODUCT_MOCSC_PLACEHOLDER
+    
     end
     f.actions
 end
