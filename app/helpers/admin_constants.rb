@@ -33,15 +33,52 @@ module AdminConstants
 #
 # Order
 #
-  ADMIN_ORDER_NUMBER_HINT                = "Order ID or tracking number."
-  ADMIN_ORDER_NUMBER_PLACEHOLDER         = "1-0001"
+  ADMIN_ORDER_CUSTOMER_HINT              = "Name of buyer or retailer.  If new create a Customer entry first."
+
+  ADMIN_ORDER_PRODUCT_HINT               = "Product ordered. If not found in list create it in Products."
+
+  ADMIN_ORDER_ORDER_NUMBER_HINT          = "Order Identifier."
+  ADMIN_ORDER_ORDER_NUMBER_PLACEHOLDER   = "Use Customer initials and incremental number.  For Maring Tack & Feed, MTF-0001"
+
+  ADMIN_ORDER_TERMS_HINT                 = "Payment terms."
+  ADMIN_ORDER_TERMS_COLLECTION           = %w[ Paid_in_full Delivery Net15 Net30 On_sale-Consignment]
+  ADMIN_ORDER_TERMS_PLACEHOLDER          = "Net15"
+
+  ADMIN_ORDER_REP_HINT                   = "Rep who gets credit for tis order."
+  ADMIN_ORDER_REP_PLACEHOLDER            = "Rep name"
+
+  ADMIN_ORDER_QTY_HINT                   = "Total piece count for order.  List color and size options in Notes."
+  ADMIN_ORDER_QTY_PLACEHOLDER            = "300"
+
+  ADMIN_ORDER_PRICE_HINT                 = "Gross price for this order."
+  ADMIN_ORDER_PRICE_PLACEHOLDER          = "144 * 10 = 1,440."
+  
+  ADMIN_ORDER_DISCOUNT_HINT              = "Gross price off price for this order if any."
+  ADMIN_ORDER_DISCOUNT_PLACEHOLDER       = "$144"
+  
+  ADMIN_ORDER_PAID_HINT                  = "Check if paid in full including tax and shipping costs."
+  ADMIN_ORDER_PAID_PLACEHOLDER           = "100.00"
+
+  ADMIN_ORDER_TAX_HINT                   = "Sales and similar taxes due on price amount."
+  ADMIN_ORDER_TAX_PLACEHOLDER            = "100.00"
+  
+  ADMIN_ORDER_SHIP_TO_HINT               = "Address order will ship or deliver to. If direct deliver, use 'Delivered'."
+  ADMIN_ORDER_SHIP_TO_PLACEHOLDER        = "123 Elm St., Somerville, NJ 07060 attn: Nancy"
+
+  ADMIN_ORDER_SHIP_COST_HINT             = "Shipping cost San Rafael to customer ship_to address."
+  ADMIN_ORDER_SHIP_COST_PLACEHOLDER      = "$144"
+
+  ADMIN_ORDER_SHIPPED_HINT               = "Check if shipped or delivered complete."
 
   ADMIN_ORDER_PAYMENT_METHOD_HINT        = "Payment method used.  If other, describe in Notes."
-  ADMIN_ORDER_PAYMENT_METHOD_COLLECTION  = %w[ Visa Paymentech Paypal Invoice Cash Check Invoice Other ]
-  ADMIN_ORDER_TERMS_HINT                 = "Payment terms."
-  ADMIN_ORDER_TERMS_COLLECTION           = %w[ Delivery Net15 Net30 On_sale-Consignment]
-  ADMIN_ORDER_TERMS_PLACEHOLDER          = "Net15"
+  ADMIN_ORDER_PAYMENT_METHOD_COLLECTION  = %w[ Visa Paymentech Paypal Invoice Cash Check Invoice Consignment Other ]
+ 
   ADMIN_ORDER_SHIPPED_ON_HINT            = "Date was or will be shipped."
+  ADMIN_ORDER_SHIPPED_ON_PLACEHOLDER     = "mm-dd-yyyy"
+
+  ADMIN_ORDER_NOTES_HINT                 = "Notes about this order."
+  ADMIN_ORDER_NOTES_PLACEHOLDER          = "See invoice in QBO."
+#
 #
 # Product
 #

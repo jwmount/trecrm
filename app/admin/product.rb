@@ -13,7 +13,6 @@ ActiveAdmin.register Product do
     column :characteristics
     column :quote_basis
     column :minimum_order_cost
-    column :minimum_order_ship_cost
   end
   
   form do |f|
@@ -44,9 +43,6 @@ ActiveAdmin.register Product do
         :hint                => AdminConstants::ADMIN_PRODUCT_MOC_HINT,
         :placeholder         => AdminConstants::ADMIN_PRODUCT_MOC_PLACEHOLDER
 
-      f.input :minimum_order_cost,
-        :hint                => AdminConstants::ADMIN_PRODUCT_MOCSC_HINT,
-        :placeholder         => AdminConstants::ADMIN_PRODUCT_MOCSC_PLACEHOLDER
     
     end
     f.actions
@@ -60,7 +56,7 @@ end
     permitted = [:name, :sku, :characteristics, :supplier, :qty_on_hand,
     	         :reorder_level, :qty_minium_order, :minimum_order_cost,
     	         :quote_basis, :port_to_warehouse_cost, :insurance_cost,
-    	         :min_order_ship_cost, :weight_per_each, :notes
+    	         :weight_per_piece, :notes
                 ]
 #   permitted << :other if resource.something?
 #   permitted

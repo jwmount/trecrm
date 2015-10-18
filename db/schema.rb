@@ -70,19 +70,21 @@ ActiveRecord::Schema.define(version: 20151009023452) do
     t.integer  "customer_id"
     t.integer  "product_id"
     t.string   "order_number"
-    t.string   "terms"
+    t.integer  "terms"
+    t.string   "payment_method"
     t.string   "rep"
     t.integer  "qty"
-    t.decimal  "price",        precision: 10, scale: 2
-    t.decimal  "discount",     precision: 10
+    t.decimal  "price",          precision: 10, scale: 2
+    t.decimal  "discount",       precision: 10
     t.boolean  "paid"
-    t.decimal  "tax",          precision: 10, scale: 2
-    t.decimal  "shipping",     precision: 10, scale: 2
+    t.decimal  "tax",            precision: 10, scale: 2
+    t.string   "ship_to"
+    t.decimal  "ship_cost",      precision: 10, scale: 2
     t.datetime "shipped_on"
-    t.boolean  "shipped",                               default: false
+    t.boolean  "shipped",                                 default: false
     t.text     "notes"
-    t.datetime "created_at",                                            null: false
-    t.datetime "updated_at",                                            null: false
+    t.datetime "created_at",                                              null: false
+    t.datetime "updated_at",                                              null: false
   end
 
   create_table "products", force: :cascade do |t|
@@ -97,8 +99,7 @@ ActiveRecord::Schema.define(version: 20151009023452) do
     t.string   "quote_basis"
     t.decimal  "port_to_warehouse_cost", precision: 8, scale: 2
     t.decimal  "insurance_cost",         precision: 8, scale: 2
-    t.decimal  "min_order_ship_cost",    precision: 8, scale: 2
-    t.string   "weight_per_each"
+    t.string   "weight_per_piece"
     t.text     "notes"
     t.datetime "created_at",                                     null: false
     t.datetime "updated_at",                                     null: false

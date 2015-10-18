@@ -12,8 +12,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string  :quote_basis
       t.decimal :port_to_warehouse_cost, precision: 8, scale: 2
       t.decimal :insurance_cost, precision: 8, scale: 2
-      t.decimal :min_order_ship_cost, precision: 8, scale: 2
-      t.string  :weight_per_each
+      t.string  :weight_per_piece
       t.text    :notes
       t.timestamps null: false
     end
