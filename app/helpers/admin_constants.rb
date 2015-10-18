@@ -41,7 +41,7 @@ module AdminConstants
   ADMIN_ORDER_ORDER_NUMBER_PLACEHOLDER   = "Use Customer initials and incremental number.  For Maring Tack & Feed, MTF-0001"
 
   ADMIN_ORDER_TERMS_HINT                 = "Payment terms."
-  ADMIN_ORDER_TERMS_COLLECTION           = %w[ Paid_in_full Delivery Net15 Net30 On_sale-Consignment]
+  ADMIN_ORDER_TERMS_COLLECTION           = %w[ Paid_in_full Delivery Net15 Net30 On_sale-Consignment ]
   ADMIN_ORDER_TERMS_PLACEHOLDER          = "Net15"
 
   ADMIN_ORDER_REP_HINT                   = "Rep who gets credit for tis order."

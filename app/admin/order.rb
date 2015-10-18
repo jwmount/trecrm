@@ -32,7 +32,6 @@ ActiveAdmin.register Order do
  end
 
  form do |f|
-  error_panel f
   f.semantic_errors *f.object.errors.keys
 
 
@@ -88,6 +87,8 @@ ActiveAdmin.register Order do
               :hint          => AdminConstants::ADMIN_ORDER_NOTES_HINT,
               :placeholder   => AdminConstants::ADMIN_ORDER_NOTES_HINT
     end
+    error_panel f
+
     f.actions
   end
  permit_params :list, :of, :attributes, :on, :model
