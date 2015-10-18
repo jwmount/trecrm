@@ -37,7 +37,10 @@ module AdminConstants
   ADMIN_ORDER_NUMBER_PLACEHOLDER         = "1-0001"
 
   ADMIN_ORDER_PAYMENT_METHOD_HINT        = "Payment method used.  If other, describe in Notes."
-  ADMIN_ORDER_PAYMENT_METHOD_COLLECTION  = %w[ Visa Paymentech Paypal Invoice Check Invoice Other ]
+  ADMIN_ORDER_PAYMENT_METHOD_COLLECTION  = %w[ Visa Paymentech Paypal Invoice Cash Check Invoice Other ]
+  ADMIN_ORDER_TERMS_HINT                 = "Payment terms."
+  ADMIN_ORDER_TERMS_COLLECTION           = %w[ Delivery Net15 Net30 On_sale-Consignment]
+  ADMIN_ORDER_TERMS_PLACEHOLDER          = "Net15"
   ADMIN_ORDER_SHIPPED_ON_HINT            = "Date was or will be shipped."
 #
 # Product

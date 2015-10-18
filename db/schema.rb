@@ -1,4 +1,3 @@
-
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -71,18 +70,19 @@ ActiveRecord::Schema.define(version: 20151009023452) do
     t.integer  "customer_id"
     t.integer  "product_id"
     t.string   "order_number"
+    t.string   "terms"
     t.string   "rep"
     t.integer  "qty"
-    t.decimal  "price",        precision: 5, scale: 2
-    t.decimal  "discount",     precision: 2
+    t.decimal  "price",        precision: 10, scale: 2
+    t.decimal  "discount",     precision: 10
     t.boolean  "paid"
-    t.decimal  "tax",          precision: 5, scale: 2
-    t.decimal  "shipping",     precision: 5, scale: 2
+    t.decimal  "tax",          precision: 10, scale: 2
+    t.decimal  "shipping",     precision: 10, scale: 2
     t.datetime "shipped_on"
-    t.boolean  "shipped",                              default: false
+    t.boolean  "shipped",                               default: false
     t.text     "notes"
-    t.datetime "created_at",                                           null: false
-    t.datetime "updated_at",                                           null: false
+    t.datetime "created_at",                                            null: false
+    t.datetime "updated_at",                                            null: false
   end
 
   create_table "products", force: :cascade do |t|

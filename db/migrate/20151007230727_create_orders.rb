@@ -4,6 +4,7 @@ class CreateOrders < ActiveRecord::Migration
       t.integer :customer_id
       t.integer :product_id
       t.string  :order_number
+      t.string  :terms
       t.string  :rep
       t.integer :qty
       t.decimal :price,      precision: 10, scale: 2

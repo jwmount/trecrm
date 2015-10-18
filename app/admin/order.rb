@@ -26,11 +26,39 @@ ActiveAdmin.register Order do
     column :qty
     column :price
     column :paid
+    column :terms
     column :shipped
     
  end
 
+ form do |f|
+  error_panel f
+  f.semantic_errors *f.object.errors.keys
 
+
+    f.inputs "Approvals" do
+
+      f.input :customer
+      f.input :product
+      f.input :order_number
+      f.input :terms,
+              :hint          => AdminConstants::ADMIN_ORDER_TERMS_HINT,
+              :collection    => AdminConstants::ADMIN_ORDER_TERMS_COLLECTION,
+              :as            => :select,
+              :include_blank => false
+      f.input :rep
+      f.input :qty
+      f.input :price
+      f.input :discount
+      f.input :paid
+      f.input :tax
+      f.input :shipping
+      f.input :shipped
+      f.input :shipped_on
+      f.input :notes
+    end
+    f.actions
+  end
  permit_params :list, :of, :attributes, :on, :model
 #
 # or
