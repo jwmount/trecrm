@@ -14,6 +14,7 @@ module AdminConstants
 # Company
 #
   ADMIN_CUSTOMER_APPROVED_HINT           = "Customer is approved to order."
+  ADMIN_CUSTOMER_CONTACT_LABEL           = "Contact(s)"
   ADMIN_CUSTOMER_CONTACT_HINT            = "Person who knows about buying from us."
   ADMIN_CUSTOMER_LEGAL_NAME_HINT         = "Legal business name, e.g. Saddles DBA or LLC or Corp."
   ADMIN_CUSTOMER_NAME_HINT               = "Best known or public name."   
@@ -41,7 +42,7 @@ module AdminConstants
   ADMIN_ORDER_ORDER_NUMBER_PLACEHOLDER   = "Use Customer initials and incremental number.  For Maring Tack & Feed, MTF-0001"
 
   ADMIN_ORDER_TERMS_HINT                 = "Payment terms."
-  ADMIN_ORDER_TERMS_COLLECTION           = %w[ Paid_in_full Delivery Net15 Net30 On_sale-Consignment ]
+  ADMIN_ORDER_TERMS_COLLECTION           = %w[ Pay_to_ship Delivery Net15 Net30 On_sale-Consignment ]
   ADMIN_ORDER_TERMS_PLACEHOLDER          = "Net15"
 
   ADMIN_ORDER_REP_HINT                   = "Rep who gets credit for tis order."
@@ -62,9 +63,12 @@ module AdminConstants
   ADMIN_ORDER_TAX_HINT                   = "Sales and similar taxes due on price amount."
   ADMIN_ORDER_TAX_PLACEHOLDER            = "100.00"
   
-  ADMIN_ORDER_SHIP_TO_HINT               = "Address order will ship or deliver to. If direct deliver, use 'Delivered'."
+  ADMIN_ORDER_SHIP_TO_HINT               = "Address order will ship or deliver to. 'Primary' means same as first product in order. If direct delivery, use 'Delivered'."
   ADMIN_ORDER_SHIP_TO_PLACEHOLDER        = "123 Elm St., Somerville, NJ 07060 attn: Nancy"
 
+  ADMIN_ORDER_SHIPPER_HINT               = "Shipper used for this order."
+  ADMIN_ORDER_SHIPPER_COLLECTION         = %w[ FedEx DHL UPS USPS Other Direct ]
+  
   ADMIN_ORDER_SHIP_COST_HINT             = "Shipping cost San Rafael to customer ship_to address."
   ADMIN_ORDER_SHIP_COST_PLACEHOLDER      = "$144"
 
@@ -78,6 +82,9 @@ module AdminConstants
 
   ADMIN_ORDER_NOTES_HINT                 = "Notes about this order."
   ADMIN_ORDER_NOTES_PLACEHOLDER          = "See invoice in QBO."
+
+  ADMIN_ORDER_SEASON_HINT                = "Order shipping season"
+  ADMIN_ORDER_SEASON_COLLECTION          = %w[ Fall Spring ]
 #
 #
 # Product

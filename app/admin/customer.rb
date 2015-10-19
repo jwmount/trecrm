@@ -22,7 +22,9 @@ ActiveAdmin.register Customer do
     column :approved_to_order do |customer|
       status_tag (customer.approved_to_order ? "YES" : "No"), (customer.approved_to_order ? :ok : :error)
     end      
-    column :contact
+    column "Contact(s)" do |customer|
+      :contact
+    end
     column :phone
     column :email  
     column "Orders" do |customer|

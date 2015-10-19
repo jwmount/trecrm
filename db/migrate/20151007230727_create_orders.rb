@@ -8,11 +8,13 @@ class CreateOrders < ActiveRecord::Migration
       t.string  :payment_method
       t.string  :rep
       t.integer :qty
+      t.integer :season
       t.decimal :price,      precision: 10, scale: 2
       t.decimal :discount,   precision: 10
       t.boolean :paid
       t.decimal :tax,        precision: 10, scale: 2
-      t.string :ship_to    
+      t.string  :shipper
+      t.string  :ship_to    
       t.decimal :ship_cost,  precision: 10, scale: 2
       t.datetime :shipped_on
       t.boolean :shipped,    default: false

@@ -72,6 +72,17 @@ ActiveAdmin.register Order do
       f.input :tax,
               :hint          => AdminConstants::ADMIN_ORDER_TAX_HINT,
               :placeholder   => AdminConstants::ADMIN_ORDER_TAX_PLACEHOLDER
+
+      f.input :season,
+              :hint          => AdminConstants::ADMIN_ORDER_SEASON_HINT,
+              :as            => :select,
+              :collection    => AdminConstants::ADMIN_ORDER_SEASON_COLLECTION
+     
+      f.input :shipper,
+              :hint          => AdminConstants::ADMIN_ORDER_SHIPPER_HINT,
+              :as            => :select,
+              :collection    => AdminConstants::ADMIN_ORDER_SHIPPER_COLLECTION
+
       f.input :ship_to,
               :hint          => AdminConstants::ADMIN_ORDER_SHIP_TO_HINT,
               :planceholder  => AdminConstants::ADMIN_ORDER_SHIP_TO_PLACEHOLDER
@@ -97,7 +108,7 @@ ActiveAdmin.register Order do
 #
   permit_params do
   permitted = [:customer_id, :product_id, :order_number, :terms, :rep, :qty, :price, :discount,
-               :paid, :tax, :shipping, :shipped, :shipped_on, :notes
+               :season, :paid, :tax, :shipper, :shipped, :shipped_on, :notes
               ]
 #   permitted << :other if resource.something?
 #   permitted

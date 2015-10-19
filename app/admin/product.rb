@@ -13,6 +13,7 @@ ActiveAdmin.register Product do
     column :characteristics
     column :quote_basis
     column :minimum_order_cost
+    column :notes
   end
   
   form do |f|
