@@ -18,15 +18,20 @@ ActiveAdmin.register Customer do
       render customer
     end
 
-
     column :approved_to_order do |customer|
       status_tag (customer.approved_to_order ? "YES" : "No"), (customer.approved_to_order ? :ok : :error)
     end      
+
     column "Contact(s)" do |customer|
-      :contact
+      customer.contact
     end
-    column :phone
+    
+    column "Phone(s)" do |customer|
+      customer.phone
+    end
+
     column :email  
+
     column "Orders" do |customer|
       render customer.orders if customer.orders.any?
       render text: 'None' if customer.orders.empty?
