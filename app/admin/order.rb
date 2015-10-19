@@ -102,6 +102,33 @@ ActiveAdmin.register Order do
 
     f.actions
   end
+
+#
+# Show
+#
+# show :title => :display_name do
+ show :title => :order_number do
+    attributes_table do
+      row :order_number
+      row :customer
+      row :product
+      row :terms
+      row :rep
+      row :qty
+      row :price
+      row :discount
+      row :season
+      row ("Paid") { status_tag (order.paid ? "Yes" : "No" ), (order.paid ? :true : false) }
+      row :tax
+      row :shipper
+      row :shipped
+      row :shipped_on
+      row :notes
+
+  end
+ end #show
+
+
  permit_params :list, :of, :attributes, :on, :model
 #
 # or
