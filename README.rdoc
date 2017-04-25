@@ -1,7 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is just fooling around with a bare bones app to keep track of customers for TRE.  Not very useful and we decided to rely on QBO anyway...
 
 Things you may want to cover:
 
